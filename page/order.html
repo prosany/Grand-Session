@@ -18,10 +18,10 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       .scroll-bar::-webkit-scrollbar {
-        width: 0px;S
+        width: 0px;
       }
 
       .cart-item-style {
@@ -35,7 +35,7 @@
     <div class="navbar bg-slate-700 yellow">
       <div class="flex-1">
         <div class="flex text-white items-center ml-10">
-          <img src="./images/logo.png" class="w-10 md:w-20" alt="" />
+          <img src="../images/logo.png" class="w-10 md:w-20" alt="" />
           <span class="text-xl md:text-5xl ml-2 font-bold">PIXEL STORE</span>
         </div>
       </div>
@@ -58,8 +58,8 @@
 
           <li class="ml-10">
             <a
+              href="/page/order.html"
               class="text-white cursor-pointer hover:text-blue-400 duration-200 font-bold text-2xl"
-              href="./page/orders.html"
               ><i class="fa-solid fa-list-check mr-2 text-warning"></i>Orders</a
             >
           </li>
@@ -93,7 +93,7 @@
               <a><i class="fa-solid fa-heart"></i> WishList</a>
             </li>
             <li>
-              <a href="./page/orders.html"
+              <a href="/page/order.html"
                 ><i class="fa-solid fa-list-check"></i> Orders</a
               >
             </li>
@@ -114,7 +114,8 @@
       <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content scroll-bar">
         <!-- Page content here -->
-        <h1 class="text-center font-bold text-3xl my-5">NEW ON PIXEL STORE</h1>
+        <h1 class="text-center font-bold text-3xl my-5">Orders History</h1>
+        <p id="order-message"></p>
 
         <!-- home page -->
 
@@ -122,165 +123,7 @@
           <div
             class="max-w-[1100px] gap-4 mx-10 md:mx-auto min-h-[300px] grid md:grid-cols-3 sm:grid-cols-2"
             id="homepage-content"
-          >
-            <!-- cards are here -->
-            <!-- <div class="card bg-base-100 shadow-2xl p-4">
-              <figure class="">
-                <img
-                  src="./images/product-placeholder.png"
-                  alt="Shoes"
-                  class="rounded-lg w-full h-[300px]"
-                />
-              </figure>
-
-              <div class="mt-[20px]">
-                <div class="flex justify-between">
-                  <h2 class="card-title">Redmi Note 11!</h2>
-                  <div class="flex text-lg">
-                    <span class="mr-4"
-                      ><i class="fa-solid fa-heart text-slate-500"></i
-                    ></span>
-                    <span
-                      ><i class="fa-solid fa-square-minus text-red-700"></i
-                    ></span>
-                  </div>
-                </div>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <h3 class="card-title">Price: $1200</h3>
-                <div class="mt-2 flex justify-between">
-                  <label
-                    for="my-modal-3"
-                    class="btn btn-outline btn-primary w-[45%] mx-auto flex justify-center items-center"
-                  >
-                    <i class="fa-solid fa-circle-info mr-2"></i> See Details
-                  </label>
-
-                  <button
-                    class="btn btn-outline btn-secondary w-[45%] mx-auto block"
-                  >
-                    <i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now
-                  </button>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="card bg-base-100 shadow-2xl p-4">
-              <figure class="">
-                <img
-                  src="./images/product-placeholder.png"
-                  alt="Shoes"
-                  class="rounded-lg w-full h-[300px]"
-                />
-              </figure>
-
-              <div class="mt-[20px]">
-                <div class="flex justify-between">
-                  <h2 class="card-title">Redmi Note 11!</h2>
-                  <div class="flex text-lg">
-                    <span class="mr-4"
-                      ><i class="fa-solid fa-heart text-slate-500"></i
-                    ></span>
-                    <span
-                      ><i class="fa-solid fa-square-minus text-red-700"></i
-                    ></span>
-                  </div>
-                </div>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <h3 class="card-title">Price: $1200</h3>
-                <div class="mt-2 flex justify-between">
-                  <label
-                    for="my-modal-3"
-                    class="btn btn-outline btn-primary w-[45%] mx-auto flex justify-center items-center"
-                  >
-                    <i class="fa-solid fa-circle-info mr-2"></i> See Details
-                  </label>
-
-                  <button
-                    class="btn btn-outline btn-secondary w-[45%] mx-auto block"
-                  >
-                    <i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now
-                  </button>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="card bg-base-100 shadow-2xl p-4">
-              <figure class="">
-                <img
-                  src="./images/product-placeholder.png"
-                  alt="Shoes"
-                  class="rounded-lg w-full h-[300px]"
-                />
-              </figure>
-
-              <div class="mt-[20px]">
-                <div class="flex justify-between">
-                  <h2 class="card-title">Redmi Note 11!</h2>
-                  <div class="flex text-lg">
-                    <span class="mr-4"
-                      ><i class="fa-solid fa-heart text-slate-500"></i
-                    ></span>
-                    <span
-                      ><i class="fa-solid fa-square-minus text-red-700"></i
-                    ></span>
-                  </div>
-                </div>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <h3 class="card-title">Price: $1200</h3>
-                <div class="mt-2 flex justify-between">
-                  <label
-                    for="my-modal-3"
-                    class="btn btn-outline btn-primary w-[45%] mx-auto flex justify-center items-center"
-                  >
-                    <i class="fa-solid fa-circle-info mr-2"></i> See Details
-                  </label>
-
-                  <button
-                    class="btn btn-outline btn-secondary w-[45%] mx-auto block"
-                  >
-                    <i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now
-                  </button>
-                </div>
-              </div>
-            </div> -->
-            <!-- <div class="card bg-base-100 shadow-2xl p-4">
-              <figure class="">
-                <img
-                  src="./images/product-placeholder.png"
-                  alt="Shoes"
-                  class="rounded-lg w-full h-[300px]"
-                />
-              </figure>
-
-              <div class="mt-[20px]">
-                <div class="flex justify-between">
-                  <h2 class="card-title">Redmi Note 11!</h2>
-                  <div class="flex text-lg">
-                    <span class="mr-4"
-                      ><i class="fa-solid fa-heart text-slate-500"></i
-                    ></span>
-                    <span
-                      ><i class="fa-solid fa-square-minus text-red-700"></i
-                    ></span>
-                  </div>
-                </div>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <h3 class="card-title">Price: $1200</h3>
-                <div class="mt-2 flex justify-between">
-                  <label
-                    for="my-modal-3"
-                    class="btn btn-outline btn-primary w-[45%] mx-auto flex justify-center items-center"
-                  >
-                    <i class="fa-solid fa-circle-info mr-2"></i> See Details
-                  </label>
-
-                  <button
-                    class="btn btn-outline btn-secondary w-[45%] mx-auto block"
-                  >
-                    <i class="fa-solid fa-bag-shopping mr-2"></i>Buy Now
-                  </button>
-                </div>
-              </div>
-            </div> -->
-          </div>
+          ></div>
         </div>
 
         <!-- wishlist page -->
@@ -474,8 +317,8 @@
         </div>
       </div>
     </footer>
-    <script src="./js/storage.js"></script>
-    <script src="./js/script.js"></script>
-    <script src="./js/common.js"></script>
+    <script src="../js/storage.js"></script>
+    <script src="../js/order.js"></script>
+    <script src="../js/common.js"></script>
   </body>
 </html>
