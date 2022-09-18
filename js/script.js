@@ -1,7 +1,7 @@
 let dataSet;
 let cart = [];
 
-fetch("../data.json")
+fetch("https://raw.githubusercontent.com/prosany/Grand-Session/main/data.json")
   .then((res) => res.json())
   .then((data) => {
     dataSet = data;
